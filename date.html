@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+<body>
+    
+    <script>
+        
+        {
+        // New Date untuk membuat date waktu saat ini
+        // Create Date
+        const date1 = new Date();
+        console.info(date1);
+
+        const date2 = new Date(2023, 1, 23)
+        console.info(date2)
+
+        const date3 = new Date(2022, 10, 10, 16,59,9, 123)
+        console.info(date3)
+
+        const date4 = new Date(1705994131278)
+        console.info(date4)
+        }
+
+        {
+
+         // Create Date dengan getTime()
+         const date1 = new Date();
+        console.info(date1.getTime());
+
+        const date2 = new Date(2023, 1, 23)
+        console.info(date2.getTime())
+
+        const date3 = new Date(2022, 10, 10, 16,59,9, 123)
+        console.info(date3.getTime())
+
+        const date4 = new Date(1705994131278)
+        console.info(date4.getTime())
+        }
+
+        {
+            // Date Paring 
+
+            const time = Date.parse('2020-10-10T08:45:45.123+07:00')
+            console.info(time);
+            console.info(new Date(time))
+        }
+
+        {
+            // Getter & Setter
+
+            const dateNow = new Date();
+            dateNow.setFullYear('2021')
+            console.info(dateNow.getFullYear());
+            console.info(dateNow.getMonth());
+            console.info(dateNow.getDate());
+            console.info(dateNow.getHours());
+            console.info(dateNow.getMinutes());
+            console.info(dateNow.getSeconds());
+            console.info(dateNow.getMilliseconds());
+            console.info(dateNow.getTimezoneOffset());
+        }
+
+    </script>
+
+
+</body>
+</html>
