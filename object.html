@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    
+
+<script>
+    // Object Freeze berarti object tidak bisa diubah dan dihapus
+    // Object seal berarti object bisa ubah tetapi tidak bisa dihapus dan tidak bisa ditambahkan
+
+    const person = {
+        firstName : "Samuel",
+        lastName : "Bosawer"
+    };
+
+    // Object.freeze(person)
+    Object.seal(person)
+
+    person.firstName = "Sam";
+    person.middleName = "Septer";
+    delete person.lastName;
+
+    console.info(person);
+
+
+    // Object Assign
+    // Untuk menggabungkan satu object dengan object yang lain 
+
+    const target = {firstName : "Samuel"}
+    const source = {lastName : "Bosawer"}
+    const coba = {middleName : "Septer"}
+
+    // Object source digabungkan ke object target
+    Object.assign(target, source);
+    Object.assign(target, coba);
+
+    console.info(source);
+    console.info(target);
+
+
+    // Object Property Name & Value 
+    const fullName = {
+        firstName : "Eko",
+        lastName : "Kurniawan"
+    };
+
+    // Mengambil value 
+    console.info(Object.values(fullName))
+
+    // Mengambil property pada object
+    console.info(Object.getOwnPropertyNames(fullName))
+
+
+     
+
+</script>
+
+</body>
+</html>
