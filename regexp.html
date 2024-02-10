@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reg Exp</title>
+</head>
+<body>
+    
+    <script>
+      {
+        // Create Regx
+        const regex1 = /[sam]/;
+        const regex2 = new RegExp("[sam]")
+        const regex3 = new RegExp(/[sam]/)
+
+        console.info(regex1)
+        console.info(regex2)
+        console.info(regex3)
+      }
+
+      {
+        // rest regx
+        
+        const name = "samuel bosawer samuel septer";
+        const regex = /septer/;
+
+        const result = regex.exec(name);
+        console.info(result)
+        console.info(regex.exec('tidak ada'))
+
+        const test = regex.test(name);
+        console.info(test);
+        console.info(regex.test('tidak ada'))
+      }
+
+
+      {
+        // regex modifier
+        const name  = 'Samuel Bosawer\n bosawer septer';
+        const regex1 = /Samuel/g;
+        const regex2 = /^Bosawer/igm;
+
+        let result;
+         while((result = regex1.exec(name))!== null)
+         {
+            console.info(result);
+         }
+
+         while((result = regex2.exec(name))!== null)
+         {
+            console.info(result);
+         }
+
+      }
+
+    {
+        // Advanced regex
+
+        const regex = /samb[aiuoe]/ig;
+
+        const nama = 'samba sambi sambo sambie samoe sambe sambo'
+
+        let result;
+         while((result = regex.exec(nama))!== null)
+         {
+            console.info(result);
+         }
+
+
+    }
+
+    {
+        // Regular expression di string 
+        const nama = 'sam samba sambi sambo sambie samoe sambe sambo';
+
+        console.info(nama.match(/samb[aiueo]/ig));
+        console.info(nama.search(/samb[aiueo]/ig));
+        console.info(nama.replace(/samb[aiueo]/ig, "keren"));
+        console.info(nama.split(/s/ig));
+
+
+    }
+    </script>
+</body>
+</html>
