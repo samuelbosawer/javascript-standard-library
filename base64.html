@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64</title>
+</head>
+<body>
+    
+    <script>
+        const original = "Samuel+Septer=Bosawer";
+        console.info(original);
+
+        const encode = btoa(original);
+        console.info(encode); 
+
+        const decoded = atob(encode);
+        console.info(decoded);
+    </script>
+
+</body>
+</html>
